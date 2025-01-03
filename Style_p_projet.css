@@ -1,0 +1,379 @@
+/* généralités */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", serif;
+}
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img, video{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: "Balsamiq Sans", serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(0, 0, 40);
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size: 18px;
+}
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(249, 249, 249);
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    font-weight: bold;
+}
+
+nav a:not(.LOGO){
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: transform 0.1s ease, border 0.1s ease, background-color 0.1s ease;
+}
+
+nav .LOGO{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border: 2px solid;
+    color: black;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+nav .LOGO div{
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 0;
+}
+
+nav .LOGO div p{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+}
+
+header li:hover a:not(.LOGO){
+    transform: scale(1.1);
+    border: 2px solid;
+}
+
+header li:hover{
+    cursor: pointer;
+}
+
+.menu_burger{
+    display: none !important;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 35px;
+    right: 0px;
+}
+
+/* section 1 */
+
+.section1{
+    background-color: rgb(249, 249, 249);
+}
+
+.section1 .container{
+    flex-direction: column;
+    background-color: white;
+    gap: 30px;
+    margin-top: 0;
+}
+
+.section1 .container div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.section1 img{
+    width: 30%;
+}
+
+.section1 h1{
+    width: 50%;
+}
+
+.section1 p{
+    text-align: center;
+}
+
+/* section 2 */
+
+.section2 .container{
+    flex-direction: column;
+    background-color: rgb(249, 249, 249);
+    gap: 20px;
+}
+
+.section2 .container div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section2 .container img{
+    width: 40%;
+}
+
+.section2 p{
+    width: 50%;
+}
+
+.section2 div p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* section3 */
+
+.section3 .container{
+    flex-direction: column;
+    background-color: rgb(249, 249, 249);
+    gap: 20px;
+}
+
+.section3 .container div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.section3 .container img{
+    width: 40%;
+}
+
+.section3 p{
+    width: 50%;
+}
+
+/* section 4 */
+
+.section4{
+    background-color: rgb(249, 249, 249);
+}
+
+.section4 .container{
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+}
+
+.section4 .list_activity{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.list_activity .list{
+    width: 400px;
+    background-color: white;
+    border: 2px solid rgb(0, 0, 40);
+    box-shadow: 5px 5px rgb(0, 0, 40);
+    border-radius: 5px;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list h3{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.list ul{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav_links{
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        background-color:rgb(0,0,0, 0.8);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .mobile_menu{
+        margin-left: 0;
+    }
+
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(8px);
+        transition: all 0.5s ease;
+    }
+
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .nav_links li{
+        width: 150px;
+        font-weight: 800;
+    }
+
+    .nav_links a, .LOGO div, .LOGO p{
+        color: white !important;
+        font-size: 22px !important;
+    }
+
+    .nav_links .LOGO{
+        border: 2px solid white;
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav_links .LOGO div{
+        border: 2px solid white;
+        width: 75px;
+        height: 75px;
+    }
+
+    .LOGO p{
+        font-size: 30px !important;
+    }
+
+    .menu_burger{
+        display: block !important;
+    }
+
+    .info_project{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    } 
+
+    .list{
+        width: 60% !important;
+    }
+
+    .list:first-child{
+        box-shadow: -5px 5px black;
+    }
+
+    h1{
+        display: none !important;
+    }
+
+    p{
+        width: 100% !important;
+    }
+
+    .section3 p{
+        text-align: center;
+    }
+
+    img{
+        width: 300px !important;
+        height: 300px;
+    }
+
+    h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .list{
+        width: 100% !important;
+    }
+}
+
+/* footer */
+
+footer{
+    border-top: thin solid;
+}
+
+@media screen and (max-width: 700px) {
+    footer{
+        border-top: none;
+    }
+}
+
+footer .container{
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer article{
+    display: flex;
+    gap: 20px;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
+

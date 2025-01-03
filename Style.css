@@ -1,0 +1,683 @@
+/* généralités */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", serif;
+    color: rgb(0, 0, 30);
+}
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img, video{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 40px 0;
+    margin: auto;
+    gap: 15px;
+}
+
+.style_container{
+    border: 2px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+}
+
+h1{
+    font-size: 50px;
+    color: rgb(245, 245, 245);
+    padding: 20px;
+}
+
+h2:not(#monthDisplay){
+    font-family: "Balsamiq Sans", serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 40);
+}
+
+h2 hr{
+    width: 100px;
+    height: 5px;
+    border: none;
+    background-color: rgb(0, 0, 40);
+    margin-top: 10px;
+}
+
+/* header */
+
+header{
+    width: 100%;
+    height: 100px;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    list-style-type: none;
+}
+
+nav ul li{
+    width: 15%;
+    font-weight: bold;
+}
+
+nav a, .LOGO, .LOGO div, .LOGO p{
+    color: rgb(245, 245, 245);
+}
+
+nav a:not(.LOGO){
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: transform 0.1s ease, border 0.1s ease, background-color 0.1s ease;
+}
+
+nav .LOGO{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    border: 2px solid;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+nav .LOGO div{
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 0;
+}
+
+nav .LOGO div p{
+    width: 100%;
+    height: 100%;
+}
+
+header li:hover a:not(.LOGO){
+    transform: scale(1.1);
+    border: 2px solid;
+}
+
+header li:hover{
+    cursor: pointer;
+}
+
+/* section 1 */
+
+.section1{
+    height: 600px;
+    background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.5)), url(images/Un-soir-chez-rav-zana.jpg) no-repeat center/cover;
+}
+
+.section1 .container{
+    justify-content: center;
+    align-items: center;
+    padding-top: 160px;
+}
+
+/* section 2 */
+
+.section2{
+    background-color: rgb(249, 249, 249);   
+}
+
+
+.calendar {
+    width: 50%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.calendar-header h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    width: 260px;
+    margin: 0;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weekdays div {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(152,87,23);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.day:hover {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    background-color: white;
+}
+
+.day.today {
+    border: 2px solid rgb(0, 0, 40);
+    border-radius: 5px;
+}
+
+/* .day.selected {
+    background-color: #3b82f6;
+    color: white;
+} */
+
+.day.selected:hover {
+    background-color: #2563eb;
+}
+
+.info_calender{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 40%;
+    height: 50%;
+}
+
+.info_calender div{
+    background-color: white;
+    padding: 20px;
+}
+
+.info_calender p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.info_calender p #red_line, #blue_line{
+    color: rgb(160, 0, 0);
+    font-weight: 500;
+}
+
+.info_calender p #blue_line{
+    color: rgb(0, 0, 160);
+}
+
+/* section 3 */ 
+
+.section3 .container{
+    flex-direction: column;
+    gap: 0px;
+}
+
+.section3 h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.carouselle{
+    display: flex;
+    align-items: start;
+    overflow-x: auto;
+    height: 280px;
+    width: 100%;
+    gap: 15px;
+    border-radius: 5px;
+    background-color: rgba(152,87,23, 0);
+    margin-bottom: 30px;
+}
+
+.carouselle::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselle_containt{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 400px;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.video_containt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.video_containt::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 5;
+    transition: opacity 0.3s ease; 
+    pointer-events: none; 
+}
+
+.video_containt:hover::before {
+    opacity: 1;
+}
+
+.video_containt video{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+
+.video_containt:hover video {
+    cursor: pointer;
+    filter: blur(1px);
+}
+
+.video_title{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.video_containt:hover .video_title {
+    opacity: 1;
+}
+
+.video_title2{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 0 15px;
+}
+
+.video_title2 h5{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.video_title2 p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.carouselle_containt h4{
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.video_title2 p:last-child{
+    font-weight: 300;
+}
+
+.section3 #line_partage{
+    background-color: rgb(0, 0, 40);
+    height: 1px;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.new_article{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.new_article a{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 270px;
+    gap: 10px;
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 40);
+    transition: transform 0.3s ease;
+}
+
+.new_article a:hover{
+    transform: translateY(-10px);
+}
+
+.new_article a img{
+    height: 160px;
+}
+
+.new_article a div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 5px;
+}
+
+.new_article a h4{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: justify;
+    text-decoration: none;
+    color: rgb(0, 0, 30);
+}
+
+.new_article a:hover h4{
+    text-decoration: underline;
+}
+
+.new_article a .name-autor{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+    color: rgb(152,87,23);
+}
+
+.new_article a p{
+    text-align: justify;
+    color: rgb(0, 0, 30);
+    margin-bottom: 10px;
+} 
+
+/* Section 4 */
+
+.section4{
+    background-color: rgb(249, 249, 249);
+}
+
+.art_rubriq{
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: auto;
+}
+
+.art_rubriq div{
+    width: 300px;
+    height: 180px;
+    border-radius: 20px;
+    transition: transform 0.2s ease
+}
+
+.rub:hover{
+    transform: scale(1.05);
+}
+
+.rub_top1{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(180, 180, 180, 0.4)),
+                url(images/Logo-Sém2.jpg) no-repeat center/cover;
+}
+
+.rub_top2{
+    background: linear-gradient(rgba(0, 0, 0,0.4), rgba(180, 180, 180, 0.4)), 
+                url(images/logo-cercle.avif) no-repeat center/cover;
+}
+
+.rub_top3{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(180, 180, 180, 0.4)),
+                url(images/logo-formation.png) no-repeat center/cover;
+}
+
+.rub_bot1{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(180, 180, 180, 0.4)),
+                url(images/Logo-articles.jpg) no-repeat center/cover;
+}
+
+.rub_bot2{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(180, 180, 180, 0.4)), 
+                url(images/Reb_Moshe_Feinstein.jpg) no-repeat center/cover;
+}
+
+.rub_bot3{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(180, 180, 180, 0.4)), 
+                url(images/bar-mitsva.jpeg) no-repeat center/cover;
+}
+
+.art_rubriq a{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* section5 */
+
+.section5 .container{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.section5 .info-partner{ 
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+}
+
+.section5 .fig-partner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.section5 .container img{
+    height: 90px;
+}
+
+
+@media screen and (max-width: 1279px) {
+
+    .new_article, .fig-partner, .calendar, .info_calender{
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .new_article{
+        gap: 20px;
+    }
+
+    .section2 .container{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+}
+
+.menu_burger{
+    display: none !important;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 35px;
+    right: 0px;
+    color: rgb(245, 245, 245);
+}
+
+@media screen and (max-width: 700px) {
+
+    .menu_burger{
+        display: block !important;
+    }
+
+    .section1 .container{
+        padding-top: 50px;
+    }
+
+    .nav_links{
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        background-color: rgb(249, 249, 249, 0.8);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .mobile_menu{
+        margin-left: 0;
+    }
+
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(8px);
+        transition: all 0.5s ease;
+    }
+
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .nav_links li{
+        width: 150px;
+        font-weight: 800;
+    }
+
+    .nav_links a, .LOGO div, .LOGO p{
+        color: black;
+        font-size: 22px !important;
+    }
+
+    .nav_links .LOGO{
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav_links .LOGO div{
+        width: 75px;
+        height: 75px;
+    }
+
+    .LOGO p{
+        font-size: 30px !important;
+    }
+
+    .section5 img{
+        height: 50px;
+    }
+
+    .fig-partner{
+        gap: 30px !important;
+    }
+
+    .calendar, .info_calender{
+        width: 100%;
+    }
+
+    .info-partner{
+        width: 90%;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    
+    .section2 h2{
+        text-align: center;
+    }
+
+    .section4 h2, h2, h3{
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+    h2 hr{
+        display: none;
+    }
+}
+
+/* footer */
+
+footer{
+    border-top: thin solid rgb(0, 0, 30);
+    background-color: rgb(249, 249, 249);
+}
+
+@media screen and (max-width: 700px) {
+    footer{
+        border-top: none;
+    }
+}
+
+footer .container{
+    justify-content: center;
+    padding: 20px 0;
+    margin: auto;    
+}
+
+footer article{
+    display: flex;
+    gap: 20px;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}

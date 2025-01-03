@@ -1,0 +1,372 @@
+/* généralités */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", serif;
+}
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img, video{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h2{
+    font-family: "Balsamiq Sans", serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(0, 0, 40);
+}
+
+h2 hr{
+    margin-top: 15px;
+    height: 5px;
+    border: none;
+    width: 100px;
+    background-color: black;
+}
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 100px;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+
+nav ul li{
+    width: 15%;
+    font-weight: bold;
+}
+
+nav a:not(.LOGO){
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: transform 0.1s ease, border 0.1s ease, background-color 0.1s ease;
+}
+
+nav .LOGO{
+    width: 70px;
+    height: 70px;
+    color: black;
+    border: 2px solid;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+nav .LOGO div{
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 0;
+}
+
+nav .LOGO div p{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+}
+
+header li:hover a:not(.LOGO){
+    transform: scale(1.1);
+    border: 2px solid;
+}
+
+header li:hover{
+    cursor: pointer;
+}
+
+.menu_burger{
+    display: none !important;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 35px;
+    right: 0px;
+}
+
+/* section 1 */
+
+.section1{
+    display: flex;
+}
+
+.section1 .container{
+    background-color: rgb(249, 249, 249);
+    padding: 40px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#form-contact{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 20px;
+}
+
+form .name{
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+}
+
+.name :last-child{
+    width: 100%;
+}
+
+form .info{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select{
+    border-radius: 0;
+    border: 2px solid gray;
+    background-color: rgba(222,184,135, 0);
+}
+
+input, select{
+    height: 40px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+textarea{
+    height: 150px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+.info input:last-child{
+    height: 40px;
+    width: 100px;
+    margin-top: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input::placeholder, textarea::placeholder{
+    padding-left: 5px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    width: 40%;
+    color: rgb(0, 0, 40);
+    background-color: white;
+    border: 2px solid;
+    border-radius: 5px;
+    box-shadow: 6px 6px black;
+    height: 60%;
+    margin-top: 20px;
+}
+
+.contact-map, .contact-number{
+    display: flex;
+    gap: 15%;
+    padding: 20px;
+}
+
+.contact-map div, .contact-number div{
+    width: 50%;
+    text-align: start;
+}
+
+.contact h3{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.contact p{
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1029px) {
+    #form-contact{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form, .contact{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav_links{
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        background-color:rgb(0, 0, 0, 0.8);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .mobile_menu{
+        margin-left: 0;
+    }
+
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(8px);
+        transition: all 0.5s ease;
+    }
+
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .nav_links li{
+        width: 150px;
+        font-weight: 800;
+    }
+
+    .nav_links a, .LOGO div, .LOGO p{
+        color: white !important;
+        font-size: 22px !important;
+    }
+
+    .nav_links .LOGO{
+        border: 2px solid white;
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav_links .LOGO div{
+        border: 2px solid white;
+        width: 75px;
+        height: 75px;
+    }
+
+    .LOGO p{
+        font-size: 30px !important;
+    }
+
+
+    .menu_burger{
+        display: block !important;
+    }
+
+    .nav_links a{
+        font-size: 20px !important;
+        font-weight: 800 !important;
+    }
+
+    form, .contact{
+        width: 100%;
+    }    
+
+    .contact-map, .contact-number{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .contact-number{
+        padding-top: 0;
+    }
+
+    .ou, .num, .mail, .adrs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact h3, p{
+        text-align: center;
+    }
+
+    h2{
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+    hr, .contact i{
+        display: none;
+    }
+}
+
+/* footer */
+
+footer{
+    border-top: thin solid rgb(0, 0, 30);
+    display: flex;
+}
+
+@media screen and (max-width: 700px) {
+    footer{
+        border-top: none;
+    }
+}
+
+footer .container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+footer article{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+

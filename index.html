@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JudaïsEmerudit</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb849fbc45.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="principal_body "></div>
+    <main>
+        <section class="section1">
+            <header>
+                <nav class="nav_links ">
+                    <ul>
+                        <li class="flex_center"> <a href="index.html" class="flex_center LOGO"> <div><p class="flex_center">BMJ</p></div></a></li>
+                        <li class="flex_center"> <a href="p_equipe.html" class="flex_center">L'ÉQUIPE</a></li>
+                        <li class="flex_center"> <a href="p_projet.html" class="flex_center">LE PROJET</a></li>
+                        <li class="flex_center"> <a href="https://www.helloasso.com/associations/bmj-un-beit-midrach-pour-la-jeunesse/adhesions/adhesion-a-judaisme-erudit" target="_blank" class="flex_center">ADHÉRER</a></li>
+                        <li class="flex_center"><a href="p-contact.html" class="flex_center">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <i class="fa-solid fa-bars fa-2xl menu_burger"></i>
+            </header>        
+            <div class="container flex_center">
+                <h1 class="style_container" style="box-shadow:5px 5px rgb(245, 245, 245);">BMJ - UN BEIT MIDRACH POUR LA JEUNESSE</h1>
+            </div>
+        </section>
+        <section class="section2">
+            <div class="container">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button id="prevMonth" class="nav-button">&lt;</button>
+                        <h2 id="monthDisplay"></h2>
+                        <button id="nextMonth" class="nav-button">&gt;</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Dim.</div>
+                        <div>Lun.</div>
+                        <div>Mar.</div>
+                        <div>Mer.</div>
+                        <div>Jeu.</div>
+                        <div>Ven.</div>
+                        <div>Sam.</div>
+                    </div>
+                    <div id="daysGrid" class="days"></div>
+                    <div id="selectedDate" class="selected-date"></div>
+                </div>
+                <article class="info_calender">
+                    <h2>PROGRAMME 2024/25 <hr></h2>
+                    <div class="style_container">
+                        <p>Ayant traité les époques antérieures au début de Ier s. pendant l’année 2023-2024, le <span id="red_line">S</span>éminaire d'<span id="red_line">I</span>ntroduction à la <span id="red_line">T</span>orah orale couvrira cette année les périodes allant de la Michna à l'époque contemporaine.</p> 
+                        <p>Le <span id="blue_line">C</span>ercle d'<span id="blue_line">É</span>tude et d'<span id="blue_line">É</span>change a pour thème <strong>la souffrance du peuple juif</strong>. Divers intervenants partageront leur réflexion à propos de cette condition qui ne manque pas d'interroger le Juif.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="container">
+                <h2>NOUVEAUTÉS<hr></h2>
+                <h3>Les denières vidéos</h3>
+                <article class="carouselle">
+                    <div class="carouselle_containt">
+                        <div class="video_containt">
+                            <video src="vidéos/istockphoto-1395696157-640_adpp_is.mp4" controls></video>
+                            <div class="video_title">
+                                <div class="video_title2">
+                                    <h5>Sous titre de la video</h5>
+                                    <p>Intervenant</p>
+                                    <p>23 novmebre 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Judaïsme Erudit | Titre de la vidéo</h4>
+                    </div>
+                    <div class="carouselle_containt">
+                        <div class="video_containt">
+                            <video src="vidéos/istockphoto-531103464-640_adpp_is.mp4" controls></video>
+                            <div class="video_title">
+                                <div class="video_title2">
+                                    <h5>sous titre de la video</h5>
+                                    <p>Intervenant</p>
+                                    <p>date de l'intervention</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Judaïsme Erudit | Titre de la vidéo</h4>
+                    </div>
+                    <div class="carouselle_containt">
+                        <div class="video_containt">
+                            <video src="vidéos/istockphoto-1248641496-640_adpp_is.mp4" controls></video>
+                            <div class="video_title">
+                                <div class="video_title2">
+                                    <h5>sous titre de la video</h5>
+                                    <p>Intervenant</p>
+                                    <p>date de l'intervention</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Judaïsme Erudit | Titre de la vidéo</h4>
+                    </div>
+                    <div class="carouselle_containt">
+                        <div class="video_containt">
+                            <video src="vidéos/istockphoto-1248641496-640_adpp_is.mp4" controls></video>
+                            <div class="video_title">
+                                <div class="video_title2">
+                                    <h5>sous titre de la video</h5>
+                                    <p>Intervenant</p>
+                                    <p>date de l'intervention</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Judaïsme Erudit | Titre de la vidéo</h4>
+                    </div>
+                </article>
+                <hr id="line_partage">
+                <h3>Les derniers articles</h3>
+                <article class="new_article">
+                    <a href="p_articles.html">
+                        <img src="images/photo-article-yehia.jpg" alt="img de l'article">
+                        <div>
+                            <h4>Article 1</h4>
+                            <p class="name-autor">Yehia Cohen | 10 décembre 2024 </p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, culpa. Ratione omnis suscipit magnam maiores odio accusantium iusto nesciunt deleniti possimus aspernatur provident qui blanditiis, quos eos, rem quisquam debitis ? Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </a>
+                    <a href="p_articles.html">
+                        <img src="images/photo-article-yehia2.jpg" alt="img de l'article">
+                        <div>
+                            <h4>Article 2</h4>
+                            <p class="name-autor">Jean Médioni | 27 novembre 2024 </p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio sint eum rerum reprehenderit illo. Quia, nesciunt commodi magni pariatur vero nostrum animi quo perferendis odit ullam deleniti laboriosam, asperiores veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </a>
+                    <a href="p_articles.html">
+                        <img src="images/falashas.jpg" alt="img de l'article">
+                        <div>
+                            <h4>Article 3</h4>
+                            <p class="name-autor">Noam Glugzberg | 9 Mars 2024 </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam earum unde, et nam modi, dicta adipisci officia quisquam odit, cupiditate sunt? Debitis, est unde vero optio eaque distinctio officia illo.
+                            Nulla voluptas, ipsam, vitae obcaecati, incidunt soluta harum omnis quia doloribus.</p>
+                        </div>
+                    </a>
+                    <a href="p_articles.html">
+                        <img src="images/bousole.png" alt="img de l'article">
+                        <div>
+                            <h4>Article 4</h4>
+                            <p class="name-autor">Raphaëlle Sitruk | 12 Janvier 2024 </p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum eos in omnis. Natus maiores error atque, ratione, totam iste, nemo nisi dolore doloremque impedit quae? Obcaecati itaque amet laboriosam officia. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+        <section class="section4">
+            <div class="container">
+                <h2>NOS RUBRIQUES<hr></h2>
+                <article class="art_rubriq flex_center item">
+                    <div class="rub_top1 rub flex_center">
+                        <a href="p_seminaires.html" class="flex_center">Les Séminaires</a>
+                    </div>
+                    <div class="rub_top2 rub flex_center">
+                        <a href="p_cercles.html" class="flex_center">Le Cercle</a>
+                    </div>
+                    <div class="rub_top3 rub flex_center">
+                        <a href="p_formation.html" class="flex_center">Formations</a>
+                    </div>
+                    <div class="rub_bot1 rub flex_center">
+                        <a href="p_nos_article.html" class="flex_center">Articles</a>
+                    </div>
+                    <div class="rub_bot2 rub flex_center">
+                        <a href="p_questions_reponses.html" class="flex_center">Questions/Réponses</a>
+                    </div>
+                    <div class="rub_bot3 rub flex_center">
+                        <a href="p_jeunesse.html" class="flex_center">Préparer la jeunesse</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section5">
+            <div class="container">
+                <article class="info-partner  style_container">
+                    <p>ILS NOUS SOUTIENNENT</p>
+                </article>
+                <figure class="fig-partner">
+                    <img src="images/Logo Noe.png" alt="Logo de Noe pour la Jeunesse">
+                    <img src="images/Logo-Fleg-2.png" alt="Logo du centre Fleg">
+                    <img src="images/project.png" alt="Logo du Beith Midrach Lamahchava">
+                    <img src="images/Logo Akadem.png" alt="Logo de Akadem">
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <article>
+                <a href="#"><i class="fa-brands fa-instagram fa-2xl icon" style="color:rgb(152,87,23);"></i></a>
+                <a href="https://www.youtube.com/channel/UC0X2dMYfLoLv153CAb0v_lQ" target="_blank"><i class="fa-brands fa-youtube fa-2xl" style="color: rgb(152,87,23);"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fa-2xl" style="color: rgb(152,87,23);"></i></a>
+            </article>
+        </div>
+    </footer>
+    <script src="indexJS.js"></script>
+</body>
+</html>
