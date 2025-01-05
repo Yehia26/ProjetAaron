@@ -339,7 +339,7 @@ footer img{
         color: white;
     }
 
-    .info_project, .section3 .container div{
+    .info_project, .section3 .container .info-project{
         flex-direction: column !important;
         justify-content: center;
         align-items: center;
