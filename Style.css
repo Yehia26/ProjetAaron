@@ -566,12 +566,6 @@ footer img{
     height: 40px;
 }
 
-@media screen and (min-width: 1500px){
-    .new_article{
-        width: 70%;
-    }
-}
-
 @media screen and (max-width: 1279px) {
 
     .new_article, .fig-partner, .calendar, .info_calender{
