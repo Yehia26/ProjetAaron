@@ -302,7 +302,7 @@ footer article{
     .nav_links ul{
         flex-direction: column;
         justify-content: start;
-        gap: 20px;
+        gap: 40px;
         align-items: center;
         padding-top: 30px;
     }
