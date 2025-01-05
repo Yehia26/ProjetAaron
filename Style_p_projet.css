@@ -135,7 +135,7 @@ header .menu_burger{
 }
 
 .section1 .container{
-    flex-direction: column;
+    flex-direction: column !important;
     background-color: white;
     gap: 30px;
     margin-top: 0;
