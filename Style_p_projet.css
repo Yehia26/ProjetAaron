@@ -340,7 +340,7 @@ footer img{
     }
 
     .info_project, .section3 .container .info-project{
-        flex-direction: column !important;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
