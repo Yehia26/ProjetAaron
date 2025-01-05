@@ -566,7 +566,7 @@ footer img{
     height: 40px;
 }
 
-@media scree and (min-width 1500px){
+@media scree and (min-width: 1500px){
     .container{
         width: 70%;
     }
