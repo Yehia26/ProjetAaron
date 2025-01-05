@@ -566,7 +566,7 @@ footer img{
     height: 40px;
 }
 
-@media scree and (min-width: 1500px){
+@media screen and (min-width: 1500px){
     .new_article{
         width: 70%;
     }
