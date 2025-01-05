@@ -1,6 +1,7 @@
 const menuHamburger = document.querySelector(".menu_burger");
 const navLinks = document.querySelector(".nav_links");
 const principalBody = document.querySelector(".principal_body")
+const bodyScroll = document.querySelector("body");
  
 menuHamburger.addEventListener('click',()=>{
     navLinks.classList.toggle('mobile_menu')
@@ -8,6 +9,10 @@ menuHamburger.addEventListener('click',()=>{
 
 menuHamburger.addEventListener('click',()=>{
     principalBody.classList.toggle('overlay')
+});
+
+menuHamburger.addEventListener('click', ()=>{
+    bodyScroll.classList.toggle('no_scroll')
 });
 
 const videos = document.querySelectorAll('Video');
