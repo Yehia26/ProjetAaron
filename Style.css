@@ -62,35 +62,35 @@ header{
     height: 100px;
 }
 
-nav{
+.nav_links{
     width: 100%;
     height: 100%;
 }
 
-nav ul{
+.nav_links ul{
     display: flex;
     justify-content: space-evenly;
     height: 100%;
     list-style-type: none;
 }
 
-nav ul li{
+.nav_links li{
     width: 15%;
     font-weight: bold;
 }
 
-nav a, .LOGO, .LOGO div, .LOGO p{
+.nav_links a{
     color: rgb(245, 245, 245);
 }
 
-nav a:not(.LOGO){
+.nav_links a:not(.LOGO){
     font-size: 18px;
     text-decoration: none;
     padding: 5px 10px;
     transition: transform 0.1s ease, border 0.1s ease, background-color 0.1s ease;
 }
 
-nav .LOGO{
+.nav_links .LOGO{
     display: flex;
     width: 70px;
     height: 70px;
@@ -100,17 +100,19 @@ nav .LOGO{
     text-decoration: none;
 }
 
-nav .LOGO div{
+.nav_links .LOGO div{
     width: 60px;
     height: 60px;
     border: 2px solid;
     border-radius: 50%;
+    color: rgb(245, 245, 245);
     padding: 0;
 }
 
-nav .LOGO div p{
+.nav_links p{
     width: 100%;
     height: 100%;
+    color: rgb(245, 245, 245);
 }
 
 header li:hover a:not(.LOGO){
@@ -120,6 +122,16 @@ header li:hover a:not(.LOGO){
 
 header li:hover{
     cursor: pointer;
+}
+
+header .menu_burger{
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 35px;
+    right: 0px;
+    color: rgb(245, 245, 245);
 }
 
 /* section 1 */
@@ -133,6 +145,10 @@ header li:hover{
     justify-content: center;
     align-items: center;
     padding-top: 160px;
+}
+
+.section1 h1{
+    box-shadow: 5px 5px rgb(245, 245, 245) ;
 }
 
 /* section 2 */
@@ -527,6 +543,28 @@ header li:hover{
     height: 90px;
 }
 
+/* footer */
+
+footer{
+    border-top: thin solid rgb(0, 0, 30);
+    background-color: rgb(249, 249, 249);
+}
+
+footer .container{
+    justify-content: center;
+    padding: 20px 0;
+    margin: auto;    
+}
+
+footer article{
+    display: flex;
+    gap: 20px;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
 
 @media screen and (max-width: 1279px) {
 
@@ -547,24 +585,10 @@ header li:hover{
 
 }
 
-.menu_burger{
-    display: none !important;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 35px;
-    right: 0px;
-    color: rgb(245, 245, 245);
-}
-
 @media screen and (max-width: 700px) {
 
-    .menu_burger{
-        display: block !important;
-    }
-
-    .section1 .container{
-        padding-top: 50px;
+    header .menu_burger{
+        display: block;
     }
 
     .nav_links{
@@ -588,11 +612,19 @@ header li:hover{
         transition: all 0.5s ease;
     }
 
-    nav ul{
+    .no_scroll{
+        overflow-y: scroll; /* Force l'affichage de la barre de défilement */
+        position: fixed; /* Empêche le contenu de défiler */
+        width: 100%; /* Évite tout décalage latéral */
+        height: 100vh;
+    }
+
+    .nav_links ul{
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         gap: 20px;
         align-items: center;
+        padding-top: 30px;
     }
 
     .nav_links li{
@@ -600,31 +632,43 @@ header li:hover{
         font-weight: 800;
     }
 
-    .nav_links a, .LOGO div, .LOGO p{
-        color: black;
-        font-size: 22px !important;
+    .nav_links a:not(.LOGO){
+        color: rgb(0, 0, 40);
+        font-size: 22px;
     }
 
     .nav_links .LOGO{
         width: 90px;
         height: 90px;
+        color: rgb(0, 0, 40);
     }
 
     .nav_links .LOGO div{
         width: 75px;
         height: 75px;
+        color: rgb(0, 0, 40);
     }
 
-    .LOGO p{
-        font-size: 30px !important;
+    .nav_links p{
+        font-size: 30px;
+        color: rgb(0, 0, 40);
+    }
+
+    .section1 .container{
+        padding-top: 50px;
+    }
+
+    .section1 h1{
+        font-size: 40px;
+        box-shadow: none;
     }
 
     .section5 img{
         height: 50px;
     }
 
-    .fig-partner{
-        gap: 30px !important;
+    .section5 .fig-partner{
+        gap: 30px;
     }
 
     .calendar, .info_calender{
@@ -633,10 +677,6 @@ header li:hover{
 
     .info-partner{
         width: 90%;
-    }
-
-    h1{
-        font-size: 40px;
     }
     
     .section2 h2{
@@ -648,36 +688,12 @@ header li:hover{
         margin-right: auto ;
     }
 
-    h2 hr{
-        display: none;
-    }
-}
-
-/* footer */
-
-footer{
-    border-top: thin solid rgb(0, 0, 30);
-    background-color: rgb(249, 249, 249);
-}
-
-@media screen and (max-width: 700px) {
     footer{
         border-top: none;
     }
-}
 
-footer .container{
-    justify-content: center;
-    padding: 20px 0;
-    margin: auto;    
-}
+    h2 hr{
+        display: none;
+    }
 
-footer article{
-    display: flex;
-    gap: 20px;
-}
-
-footer img{
-    width: 40px;
-    height: 40px;
 }
