@@ -704,5 +704,14 @@ footer img{
     }
 
     .section3 .container{
-        width: 70px;
+        width: 70%;
+    }
+
+    .section4 .container{
+        width: 70%;
+    }
+
+    .section4 .art_rubriq{
+        width: 70%;
+    }
 }
