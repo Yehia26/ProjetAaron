@@ -388,3 +388,8 @@ footer img{
     }
 }
 
+@media screnn and (max-width: 1500px) {
+    .section1 .container, .section2 .container, .section3 .container, .section4 .container{
+        width: 70%;
+    }
+}
