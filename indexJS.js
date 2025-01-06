@@ -1,3 +1,5 @@
+// Code pour le menu-burger
+
 const menuHamburger = document.querySelector(".menu_burger");
 const navLinks = document.querySelector(".nav_links");
 const principalBody = document.querySelector(".principal_body")
@@ -11,9 +13,34 @@ menuHamburger.addEventListener('click',()=>{
     principalBody.classList.toggle('overlay')
 });
 
+// Code pour bloquer le scroll à l'ouverture du menu-burger
+
 menuHamburger.addEventListener('click', ()=>{
     bodyScroll.classList.toggle('no_scroll')
 });
+
+// Code pour un pseudo carousel
+
+const container = document.querySelector('.carouselle'); // Sélectionnez l'élément conteneur
+const rightButton = document.querySelector('.move-right'); // Bouton pour défiler à droite
+const leftButton = document.querySelector('.move-left'); // Bouton pour défiler à gauche
+
+let scrollAmount = 415; // Distance à défiler en pixels
+container.style.scrollBehavior = 'smooth';
+
+
+function handleScroll(button) {
+    if (button === rightButton) {
+        container.scrollLeft += scrollAmount;
+    } else {
+        container.scrollLeft -= scrollAmount;
+    }
+}
+
+rightButton.addEventListener('click', () => handleScroll(rightButton));
+leftButton.addEventListener('click', () => handleScroll(leftButton));
+
+// Code pour annuler le flou de la video sur grand écrant au passage de la souris 
 
 const videos = document.querySelectorAll('Video');
 
@@ -26,6 +53,8 @@ videos.forEach(video => {
         }
     })
 });
+
+// Code pour calendrier
 
 class Calendar {
     constructor() {
@@ -102,12 +131,6 @@ class Calendar {
             this.daysGrid.appendChild(dayButton);
         }
     }
-
-    // selectDate(date) {
-    //     this.selectedDate = date;
-    //     this.selectedDateDisplay.textContent = `Selected: ${date.toLocaleDateString()}`;
-    //     this.renderCalendar();
-    // }
 }
 
 // Initialize the calendar when the page loads
