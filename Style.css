@@ -285,6 +285,21 @@ header .menu_burger{
     margin-bottom: 15px;
 }
 
+.section3 .carouselle_deplacement{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3 .deplacement_arrow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section3 i{
+    cursor: pointer;
+}
+
 .carouselle{
     display: flex;
     align-items: start;
@@ -708,6 +723,10 @@ footer img{
     }
 
     .section4 .container{
+        width: 70%;
+    }
+
+    .section4 .art_rubriq{
         width: 70%;
     }
 }
