@@ -313,7 +313,7 @@ footer img{
 }
 
 @media  screen and (min-width: 1500px) {
-    .container{
-        width: 70% !important;
+    .section 1 .container{
+        width: 70%;
     }
 }
