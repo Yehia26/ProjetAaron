@@ -372,3 +372,9 @@ footer article{
         border-top: none;
     }
 }
+
+@media screnn and (min-width: 1500px) {
+    .section1 .container{
+         width: 70%;
+    }
+}
