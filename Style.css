@@ -690,6 +690,15 @@ footer img{
         width: 100%;
     }
 
+    .section3 .carouselle_deplacement{
+        flex-direction: column;
+    }
+
+    .section3 .deplacement_arrow{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
     .info-partner{
         width: 90%;
     }
