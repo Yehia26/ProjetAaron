@@ -24,10 +24,9 @@ menuHamburger.addEventListener('click', ()=>{
 const container = document.querySelector('.carouselle'); // Sélectionnez l'élément conteneur
 const rightButton = document.querySelector('.move-right'); // Bouton pour défiler à droite
 const leftButton = document.querySelector('.move-left'); // Bouton pour défiler à gauche
+let scrollAmount = 380; // Distance à défiler en pixels
 
-let scrollAmount = 415; // Distance à défiler en pixels
 container.style.scrollBehavior = 'smooth';
-
 
 function handleScroll(button) {
     if (button === rightButton) {
