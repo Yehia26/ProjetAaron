@@ -320,7 +320,7 @@ header .menu_burger{
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    width: 400px;
+    width: 365px;
     border-radius: 5px;
     gap: 5px;
 }
@@ -349,7 +349,7 @@ header .menu_burger{
     opacity: 1;
 }
 
-.video_containt video{
+.video_containt video {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -357,7 +357,6 @@ header .menu_burger{
 }
 
 .video_containt:hover video {
-    cursor: pointer;
     filter: blur(1px);
 }
 
@@ -367,7 +366,7 @@ header .menu_burger{
     height: 100%;
     color: white;
     opacity: 0;
-    z-index: 10;
+    z-index: 5;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
 }
@@ -395,6 +394,20 @@ header .menu_burger{
     margin-bottom: 5px;
     color: white;
 }
+
+.play-button{
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+.play-button:hover{
+    transform: scale(1.05);
+}
+
+
 
 .carouselle_containt h4{
     font-size: 18px;
